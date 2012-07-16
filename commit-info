@@ -1,0 +1,7 @@
+-*- mode: org -*-
+#+STARTUP: showeverything
+* CHANGES
+** create-entry & aggregate functions written
+
+* TODO
+[ ] - parse string from aggregate function for title, link, and description

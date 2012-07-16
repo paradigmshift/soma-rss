@@ -1,0 +1,11 @@
+create-entry, string -> string
+accepts a string of rss entries in the format:
+    <item>
+    <title></title>
+    <description></description>
+    <link></link>
+    </item>
+returns the complete rss file feed layout.
+
+aggregate, string -> string
+accepts a directory and searches that directory for .html files which it then opens.
