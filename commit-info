@@ -1,7 +1,8 @@
 -*- mode: org -*-
 #+STARTUP: showeverything
 * CHANGES
-** create-entry & aggregate functions written
+** added parse-html item-gen and create-file functions
 
 * TODO
-[ ] - parse string from aggregate function for title, link, and description
+ - [X] - parse description from individual pages in aggregate function
+  
