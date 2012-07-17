@@ -1,8 +1,7 @@
 -*- mode: org -*-
 #+STARTUP: showeverything
 * CHANGES
-** added parse-html item-gen and create-file functions
+** fixed formatting of docs.md
 
 * TODO
- - [X] - parse description from individual pages in aggregate function
   
