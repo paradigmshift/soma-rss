@@ -15,19 +15,12 @@ returns the complete rss file feed layout.
 Example:
 
     (create-entry '("<item><title>hello</title><description>i am hello</description><link>http://hello.com/hello.html</link></item>"))
-
     "<?xml version='1.0'?> 
-
                      <rss version='2.0'> 
-
                      <channel>  
-
                      <title>Math, Lisp, and general hackery</title>  
-
                      <description>On-going documentation of my studies and projects</description>  
-
                      <link>http://mozartreina.com</link>  
-
                      <item><title>hello</title><description>i am hello</description><link>http://hello.com/hello.html</link></item>
                      </channel>
                      </rss>"
@@ -42,75 +35,40 @@ Example:
     (aggregate "/home/mo/dev/jekyll/mozartreina/_site" "http://mozartreina.com")
 
     ("<item> 
-
                    <title>   SLDB, or the Slime Debugger |  Mozart Reina  </title> 
-
                    <description> I've been using the <a href=\"http://common-lisp </description> 
-
                    <link> http://mozartreina.com/sldb-or-debugger.html </link> 
-
-                   </item> 
-    "
+                   </item>"
      "<item> 
-
                    <title>   Setting up Jekyll |  Mozart Reina  </title> 
-
                    <description> For a while now I've been thinking of using <st </description> 
-
                    <link> http://mozartreina.com/setting-up-jekyll.html </link> 
-
-                   </item> 
-    "
+                   </item>"
      "<item> 
-
                    <title>   Rolling my own RC4 Implementation |  Mozart Reina  </title> 
-
                    <description> RC4, or the \"Rivest Cipher\", named after its cr </description> 
-
                    <link> http://mozartreina.com/rolling-my-own-rc4-implementation.html </link> 
-
-                   </item> 
-    "
+                   </item>"
      "<item> 
-
                    <title>   Mathematical Induction (aka Proof by Induction) |  Mozart Reina  </title> 
-
                    <description> Mathematical proofs are statements, either writ </description> 
-
                    <link> http://mozartreina.com/proofs.html </link> 
-
-                   </item> 
-    "
+                   </item>"
      "<item> 
-
                    <title>   Mozart Reina  </title> 
-
                    <description> I've been using the <a href=\"http://common-lisp </description> 
-
                    <link> http://mozartreina.com/index.html </link> 
-
-                   </item> 
-    "
+                   </item>"
      "<item> 
-
                    <title>   Functions |  Mozart Reina  </title> 
-
                    <description> Functins are nothing more than equations where  </description> 
-
                    <link> http://mozartreina.com/functions.html </link> 
-
-                   </item> 
-    "
+                   </item>"
      "<item> 
-
                    <title>   Derivatives of Functions |  Mozart Reina  </title> 
-
                    <description> A derivative of a function, in plainspeak, is t </description> 
-
                    <link> http://mozartreina.com/derivatives-functions.html </link> 
-
-                   </item> 
-    ")
+                   </item>")
 
 ###parse-html *function*
 *string string string -> string*
@@ -131,15 +89,10 @@ Example:
 
     (item-gen "functions" "functions-derivatives.html" "functions, in plainspeak, are the basis of all forms of computer science" "http://mozartreina.com")
     "<item> 
-
                    <title> ns </title> 
-
                    <description> ctions, in plainspeak, are the basis of all for </description> 
-
                    <link> http://mozartreina.com/functions-derivatives.html.html </link> 
-
-                   </item> 
-    "
+                   </item>"
 
 ###create-file *function*
 *string -> file*
