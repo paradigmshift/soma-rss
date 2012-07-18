@@ -3,12 +3,12 @@
 ;;;;   (create-file (create-entry (aggregate "~/dev/http" "http://www.foo.com/posts")))
 
 (defun create-entry (items)
-  (let ((out (format nil "<?xml version='1.0'?> ~%
-                 <rss version='2.0'> ~%
-                 <channel>  ~%
-                 <title>Math, Lisp, and general hackery</title>  ~%
-                 <description>On-going documentation of my studies and projects</description>  ~%
-                 <link>http://mozartreina.com</link>  ~%
+  (let ((out (format nil "<?xml version='1.0'?>
+                 <rss version='2.0'>
+                 <channel> 
+                 <title>Math, Lisp, and general hackery</title> 
+                 <description>On-going documentation of my studies and projects</description> 
+                 <link>http://mozartreina.com</link> 
                  ~{~a~}
                  </channel>
                  </rss>" items)))
@@ -35,11 +35,11 @@
   (subseq str (search beg str) (search end str)))
 
 (defun item-gen (title address dscrp path)
-  (format nil "<item> ~%
-               <title> ~a </title> ~%
-               <description> ~a </description> ~%
-               <link> ~a/~a.html </link> ~%
-               </item> ~%" (subseq title 7) (subseq dscrp 3 50) path address))
+  (format nil "<item>
+               <title> ~a </title>
+               <description> ~a </description>
+               <link> ~a/~a.html </link>
+               </item>" (subseq title 7) (subseq dscrp 3 50) path address))
 
 (defun create-file (data)
   (with-open-file (stream "feed.xml"
