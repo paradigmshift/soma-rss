@@ -1,7 +1,7 @@
 -*- mode: org -*-
 #+STARTUP: showeverything
 * CHANGES
-** toplevel function for parsing arguments from command line added
+** fixed XML formatting
 
 * TODO
   
