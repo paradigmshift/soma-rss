@@ -46,3 +46,6 @@
                           :direction :output
                           :if-exists :supersede)
     (format stream "~a" data)))
+
+(defun run-from-shell ()
+  (create-file (create-entry (aggregate (nth 1 *posix-argv*) (nth 2 *posix-argv*)))))

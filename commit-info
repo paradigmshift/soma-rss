@@ -1,7 +1,7 @@
 -*- mode: org -*-
 #+STARTUP: showeverything
 * CHANGES
-** fixed formatting of docs.md
+** toplevel function for parsing arguments from command line added
 
 * TODO
   
