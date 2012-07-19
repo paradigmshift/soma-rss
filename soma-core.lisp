@@ -35,17 +35,31 @@
   (subseq str (search beg str) (search end str)))
 
 (defun item-gen (title address dscrp path)
-  (format nil "<item>
+  (let ((dscrp (remove-quote dscrp)))
+    (format nil "<item>
                <title> ~a </title>
                <description> ~a </description>
                <link> ~a/~a.html </link>
-               </item>" (subseq title 7) (subseq dscrp 3 50) path address))
+               </item>" (subseq title 7) (subseq dscrp 3 50) path address)))
 
 (defun create-file (data)
   (with-open-file (stream "feed.xml"
                           :direction :output
                           :if-exists :supersede)
     (format stream "~a" data)))
+
+(defun remove-quote (str)
+  (let ((q (search "\"" str))
+        (tag-beg (search "\<" str))
+        (tag-end (search "\>" str)))
+    (cond (q (progn (setf (char str q) #\space)
+                    (remove-quote str)))
+          (tag-beg (progn (setf (char str tag-beg) #\space)
+                          (remove-quote str)))
+          (tag-end (progn (setf (char str tag-end) #\space)
+                          (remove-quote str)))
+          (t str))))
+    
 
 (defun run-from-shell ()
   (create-file (create-entry (aggregate (nth 1 *posix-argv*) (nth 2 *posix-argv*)))))
