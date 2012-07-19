@@ -1,7 +1,7 @@
 -*- mode: org -*-
 #+STARTUP: showeverything
 * CHANGES
-** small edit to docs.md file
+** created remove-quote function for removal of double quotation and tag marks from description
 
 * TODO
   
