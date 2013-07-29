@@ -1,6 +1,9 @@
 ;;;; usage : (create-file (create-entry (aggregate [dir with .html files] [http path of .html files])))
 ;;;; ex.
-;;;;   (create-file (create-entry (aggregate "~/dev/http" "http://www.foo.com/posts")))
+;;;;   (create-file (create-entry (aggregate "~/dev/http"
+;;;; "http://www.foo.com/posts")))
+
+(in-package #:soma-rss)
 
 (defun create-entry (items)
   (let ((out (format nil "<?xml version='1.0'?>
@@ -62,4 +65,4 @@
     
 
 (defun run-from-shell ()
-  (create-file (create-entry (aggregate (nth 1 *posix-argv*) (nth 2 *posix-argv*)))))
+  (create-file (create-entry (aggregate (nth 1 sb-ext:*posix-argv*) (nth 2 sb-ext:*posix-argv*)))))
