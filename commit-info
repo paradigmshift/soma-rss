@@ -1,7 +1,7 @@
 -*- mode: org -*-
 #+STARTUP: showeverything
 * CHANGES
-** created remove-quote function for removal of double quotation and tag marks from description
+** created loadable system
 
 * TODO
   
